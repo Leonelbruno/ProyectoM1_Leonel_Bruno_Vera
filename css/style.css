@@ -31,10 +31,17 @@ Variables y utilidades
 
     --bordes-redondeados-botones: 20px  ;
 
+    --color-sombra: 2px solid rgb(36, 35, 35);
+    --sombra: 0 4px 10px rgba(0,0,0,0.2);
+
 }
 /*=================================================================================================================
 Layout
 =================================================================================================================*/
+
+/*--------
+HEADER 
+----------*/
 .header {
     display: flex;
     justify-content: center;
@@ -52,6 +59,9 @@ Layout
     font-family: var(--fuente2);
 }
 
+/*--------
+SECCION DE BOTONES
+----------*/
 
 .botones-seccion{
     display: flex;
@@ -100,6 +110,11 @@ Layout
     font-size: 1.2rem;
 }
 
+.boton-seleccionado{
+    background-color: black;
+    color: white;
+}
+
 .boton:active{
     transform: scale(0.97);
 }
@@ -110,9 +125,37 @@ Layout
 }
 
 
+/*--------
+Paletas 
+----------*/
+
+.paleta{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    padding: 1rem;
+}
+
+.tarjeta-color{
+    border-radius: var(--bordes-redondeados-botones);
+    font-family: var(--fuente2);
+    transition: 0.3s;
+    background-color: gainsboro;
+    padding: 1rem;
+}
+
+.tarjeta-color:hover{
+    transform: scale(1.02);
+    box-shadow: var(--sombra);
+}
+
+/*--------
+FOOTER
+----------*/
 
 .footer{
     display: flex;
     justify-content: center;
+    font-family: var(--fuente2);
 }
 
