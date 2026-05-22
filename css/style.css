@@ -4,7 +4,7 @@ Reset y Configuracion base
 
 * {
     box-sizing: border-box;
-    outline: 1px solid rgba(255,0,0,0.2);
+    /* outline: 1px solid rgba(255,0,0,0.2); */
 }
 
 html{
@@ -12,11 +12,14 @@ html{
 }
 
 body{
+    display: grid;
     overflow-x: hidden;
     background-color: gainsboro;
     margin:0;
     font-size: 1rem;
     line-height: 1.6;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
 }
 /* ==========================================================================
 Variables y utilidades
@@ -30,6 +33,7 @@ Variables y utilidades
 
 
     --bordes-redondeados-botones: 20px  ;
+    --bordes-marcados: 0.25px solid gray;
 
     --color-sombra: 2px solid rgb(36, 35, 35);
     --sombra: 0 4px 10px rgba(0,0,0,0.2);
@@ -48,7 +52,7 @@ HEADER
 }
 
 .titulo-principal{
-    font-family: var(--fuente1);
+    font-family: var(--fuente2);
     font-weight: 400;
     font-style: normal;  
 }
@@ -124,6 +128,16 @@ SECCION DE BOTONES
     color: white;
 }
 
+.tipo-botones{
+    display: flex;
+    list-style: none;
+    
+}
+
+.boton-formato-seleccionado{
+    background-color: black;
+    color: white;
+}
 
 /*--------
 Paletas 
@@ -141,12 +155,21 @@ Paletas
     font-family: var(--fuente2);
     transition: 0.3s;
     background-color: gainsboro;
+    border: var(--bordes-marcados);
     padding: 1rem;
 }
 
 .tarjeta-color:hover{
     transform: scale(1.02);
     box-shadow: var(--sombra);
+    /* background-color: black;
+    color: white; */
+}
+
+.color{
+    height: 150px;
+    border-radius: 15px;
+    border: var(--bordes-marcados);
 }
 
 /*--------
@@ -156,6 +179,37 @@ FOOTER
 .footer{
     display: flex;
     justify-content: center;
+    align-items: center;
+    font-family: var(--fuente2);
+    background-color: black;
+    color: white;
+    width: 100%;
+    padding: 15px 0;
+}
+
+/*--------
+TOAST
+----------*/
+
+.toast{
+    position: fixed;
+    bottom: 20px;
+    
+    left: 50%;
+    transform: translateX(-50%);
+
+    background-color: black;
+    color: white;
+
+    padding: 1rem;
+    border-radius: 15px;
+
+    opacity: 0;
+    transition: 0.5s;
+
     font-family: var(--fuente2);
 }
 
+.toast-mostrar{
+    opacity: 1;
+}
