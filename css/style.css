@@ -273,6 +273,10 @@ button{
     grid-template-columns: repeat(2, 1fr);
     }
 
+    .toast{
+        text-align: center;
+        padding: 1rem;
+    }
     .footer{
         text-align: center;
         padding: 1rem;

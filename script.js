@@ -110,6 +110,8 @@ botones.forEach(function(boton){
         let num = Number(boton.textContent);
 
         cantidadActual = num;
+
+        mostrarToast(`Se generaran ${num} tarjetas`)
     })
 })
 
