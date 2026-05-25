@@ -120,7 +120,7 @@ botonesHslHex.forEach(function(boton){
 
         if (boton.textContent === "HEX"){
             formatoActual = "hex";
-            mostrarToast("Se generará colores con Hex");
+            mostrarToast("Se generará colores con HEX");
         } else {
             mostrarToast("Se generará colores con HSL")
             formatoActual = "hsl";
@@ -140,7 +140,7 @@ Boton Generar Paleta
 ---------------------------------------------------------*/
 generar.addEventListener("click", ()=>{
     crearPaleta(cantidadActual);
-    mostrarToast("Se Generó una Paleta Aleatoria")
+    mostrarToast("Se generó una paleta aleatoria")
 })
 
 crearPaleta(cantidadActual)
