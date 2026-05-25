@@ -69,23 +69,20 @@ SECCION DE BOTONES
 
 .botones-seccion{
     display: flex;
-    position: relative;
     align-items: center;
+    justify-content: center;
     gap: 1rem;
     margin-bottom: 1rem;
 }
 
 .boton-descripcion{
-    position: absolute;
-    left: 37%;
-    top: -0%;
     font-family: var(--fuente2);
 }
 
 .botones-contenedor{
     display: flex;
     justify-content: center;
-    width: 100%;
+    
 }
 
 .botones{
@@ -124,6 +121,7 @@ SECCION DE BOTONES
 }
 
 .boton-generador{
+    flex-wrap: wrap; gap: 10px; 
     background-color: black;
     color: white;
 }
@@ -131,6 +129,9 @@ SECCION DE BOTONES
 .tipo-botones{
     display: flex;
     list-style: none;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
     
 }
 
@@ -139,24 +140,38 @@ SECCION DE BOTONES
     color: white;
 }
 
+.contenedor-boton-generador{
+    display: flex;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
 /*--------
 Paletas 
 ----------*/
 
 .paleta{
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 200px);
+
+    justify-content: center;
+
     gap: 1rem;
     padding: 1rem;
 }
-
 .tarjeta-color{
     border-radius: var(--bordes-redondeados-botones);
     font-family: var(--fuente2);
     transition: 0.3s;
-    background-color: gainsboro;
+    background-color: white;
     border: var(--bordes-marcados);
-    padding: 1rem;
+    padding: 0.7rem;
+    font-size: 0.9rem;
+}
+
+.tarjeta-color p{
+    margin: 0.4rem 0;
 }
 
 .tarjeta-color:hover{
@@ -167,7 +182,7 @@ Paletas
 }
 
 .color{
-    height: 150px;
+    height: 90px;
     border-radius: 15px;
     border: var(--bordes-marcados);
 }
