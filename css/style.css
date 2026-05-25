@@ -168,6 +168,7 @@ Paletas
     border: var(--bordes-marcados);
     padding: 0.7rem;
     font-size: 0.9rem;
+    animation: aparecer 0.5s ease;
 }
 
 .tarjeta-color p{
@@ -197,6 +198,20 @@ Paletas
 .codigo:hover {
     background-color: rgba(0,0,0,0.2);
     transform: scale(1.02);
+
+}
+
+@keyframes aparecer {
+
+    from{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
 
 }
 /*--------
@@ -248,9 +263,19 @@ Responsive
 /*--------
 CELULAR
 ----------*/
+button{
+    outline: none;
+    border: none;
+}
 
 @media (max-width: 600px){
     .paleta{
     grid-template-columns: repeat(2, 1fr);
     }
+
+    .footer{
+        text-align: center;
+        padding: 1rem;
+    }
 }
+

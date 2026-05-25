@@ -38,7 +38,7 @@ Funcion para crear 1 Tarjeta
 ---------------------------------------------------------*/
 
 
-function crearTarjeta() {
+function crearTarjeta(i) {
     let colorRandom;
     if (formatoActual === "hsl"){
         colorRandom = colorAleatorioHsl();
@@ -47,6 +47,7 @@ function crearTarjeta() {
     }
     const tarjeta = document.createElement("div");
     tarjeta.classList.add("tarjeta-color");
+    tarjeta.style.animationDelay = `${i * 0.1}s`;
     const color = document.createElement("div");
     const codigoColor = document.createElement("div");
     codigoColor.classList.add("codigo-color");
@@ -87,7 +88,7 @@ Funcion para crear paletas.
 function crearPaleta (num) {
     paleta.textContent = "";
     for(let i = 0; i < num ; i++){
-        crearTarjeta();
+        crearTarjeta(i);
     }
 };
 
