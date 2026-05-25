@@ -48,12 +48,17 @@ function crearTarjeta() {
     const tarjeta = document.createElement("div");
     tarjeta.classList.add("tarjeta-color");
     const color = document.createElement("div");
+    const codigoColor = document.createElement("div");
+    codigoColor.classList.add("codigo-color");
     const hex = document.createElement("p");
     const hsl = document.createElement("p");
+    hex.classList.add("codigo");
+    hsl.classList.add("codigo")
     color.classList.add("color")
     tarjeta.appendChild(color);
-    tarjeta.appendChild(hsl);
-    tarjeta.appendChild(hex);
+    tarjeta.appendChild(codigoColor);
+    codigoColor.appendChild(hsl);
+    codigoColor.appendChild(hex);
     paleta.appendChild(tarjeta)
 
     color.style.backgroundColor = colorRandom;
@@ -61,6 +66,16 @@ function crearTarjeta() {
     hsl.textContent = colorAleatorioHsl();
     
     hex.textContent = colorAleatorioHex();
+
+    hex.addEventListener("click", () => {
+        navigator.clipboard.writeText(hex.textContent)
+        mostrarToast("codigo HEX Copiado")
+    })
+
+    hsl.addEventListener("click", () => {
+        navigator.clipboard.writeText(hsl.textContent)
+        mostrarToast("codigo HSL Copiado")
+    })
 
 
 };

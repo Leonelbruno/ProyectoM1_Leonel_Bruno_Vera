@@ -187,9 +187,21 @@ Paletas
     border: var(--bordes-marcados);
 }
 
+.codigo{
+    border-radius: var(--bordes-redondeados-botones);
+    background-color: rgba(0,0,0,0.05);
+    padding-left: 10px;
+    transition: 0.3s;
+} 
+
+.codigo:hover {
+    background-color: rgba(0,0,0,0.2);
+    transform: scale(1.02);
+
+}
 /*--------
 FOOTER
-----------*/
+---------- */
 
 .footer{
     display: flex;
@@ -227,4 +239,18 @@ TOAST
 
 .toast-mostrar{
     opacity: 1;
+}
+
+/*=================================================================================================================
+Responsive
+=================================================================================================================*/
+
+/*--------
+CELULAR
+----------*/
+
+@media (max-width: 600px){
+    .paleta{
+    grid-template-columns: repeat(2, 1fr);
+    }
 }
