@@ -31,8 +31,6 @@ function colorAleatorioHex (){
     return '#' + Math.random().toString(16).slice(2, 8)
 };
 
-/*Math.random(): Genera un número decimal aleatorio (por ejemplo: 0.123456...)..toString(16): Convierte ese número a base 16 (hexadecimal), lo que hace aparecer las letras de la a a la f..slice(2, 8): Corta el texto para quedarse únicamente con 6 caracteres después del punto decimal.*/
-
 /*---------------------------------------------------------
 Funcion para crear 1 Tarjeta
 ---------------------------------------------------------*/

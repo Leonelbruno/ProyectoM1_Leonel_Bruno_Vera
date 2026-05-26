@@ -178,8 +178,6 @@ Paletas
 .tarjeta-color:hover{
     transform: scale(1.02);
     box-shadow: var(--sombra);
-    /* background-color: black;
-    color: white; */
 }
 
 .color{
@@ -193,6 +191,8 @@ Paletas
     background-color: rgba(0,0,0,0.05);
     padding-left: 10px;
     transition: 0.3s;
+
+    cursor: pointer;
 } 
 
 .codigo:hover {
@@ -282,4 +282,3 @@ button{
         padding: 1rem;
     }
 }
-
