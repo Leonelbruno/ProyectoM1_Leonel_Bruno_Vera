@@ -25,7 +25,7 @@ Aplicación web interactiva para generar paletas de colores aleatorias.
 
 ## Cómo ejecutar
 
-### Opción 1: Ver demo online
+### Opción 1: Deploy Online
 
 Ingresar al siguiente enlace:
 
@@ -35,3 +35,11 @@ https://leonelbruno.github.io/ProyectoM1_Leonel_Bruno_Vera/
 
 1. Clonar o descargar el proyecto
 2. Abrir `index.html` en el navegador
+
+## Implementaciones Tecnicas
+
+- Se utilizo JavaScript vanilla para practicar manipulacion del DOM sin frameworks
+- Se implemento generacion dinamica de tarjetas utilizando createElement()
+- Se utilizaron eventos para manejar la interaccion con botones y copiado al portapapeles.
+- Se implemento diseño y responsive utilizando CSS Grid y Media Queries.
+- Se agregaron animaciones CSS y toast de notificacion para mejorar la experiencia de usuario.
