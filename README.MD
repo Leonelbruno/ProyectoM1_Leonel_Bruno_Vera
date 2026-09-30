@@ -43,3 +43,6 @@ https://leonelbruno.github.io/ProyectoM1_Leonel_Bruno_Vera/
 - Se utilizaron eventos para manejar la interaccion con botones y copiado al portapapeles.
 - Se implemento diseño y responsive utilizando CSS Grid y Media Queries.
 - Se agregaron animaciones CSS y toast de notificacion para mejorar la experiencia de usuario.
+
+## Hecho por
+Leonel Bruno Vera
